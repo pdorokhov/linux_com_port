@@ -28,9 +28,9 @@
 
 		/*------------------------------- Opening the Serial Port -------------------------------*/
 
-		/* Change /dev/ttyUSB0 to the one corresponding to your system */
+		/* Change /dev/ttyACM0 to the one corresponding to your system */
 
-        	fd = open("/dev/ttyUSB0",O_RDWR | O_NOCTTY);	/* ttyUSB0 is the FT232 based USB2SERIAL Converter   */
+        	fd = open("/dev/ttyACM0",O_RDWR | O_NOCTTY);	/* ttyACM0 is the FT232 based USB2SERIAL Converter   */
 			   					/* O_RDWR   - Read/Write access to serial port       */
 								/* O_NOCTTY - No terminal will control the process   */
 								/* Open in blocking mode,read will wait              */
@@ -39,10 +39,10 @@
 									
         	//if(fd == -1)						/* Error Checking */
        if(fd < 0) {						        /* Error Checking */
-			printf("\n  Error! in Opening ttyUSB0  ");
+			printf("\n  Error! in Opening ttyACM0  ");
 			exit(0);
 		} 
-		printf("\n  ttyUSB0 Opened Successfully ");
+		printf("\n  ttyACM0 Opened Successfully ");
 
 	
 		/*---------- Setting the Attributes of the serial port using termios structure --------- */
