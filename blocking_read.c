@@ -80,8 +80,8 @@
 			write(fd, init_msg, sizeof(init_msg));						/* Write init message */
 
 			 /*------------------------------- Variables for operation messages ------------------------------*/
-			char msg[40];
-			char read_buffer[40];  
+			char *msg;
+			char read_buffer[80];  
 			//char *str0 = msg; 										
 			//int  bytes_read = 0;    									
 			//int num_bytes;
